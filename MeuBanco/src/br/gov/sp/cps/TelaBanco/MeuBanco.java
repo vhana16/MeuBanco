@@ -18,7 +18,7 @@ public class MeuBanco extends JFrame {
 		setLayout(null);
 		setLocationRelativeTo(null);
 		
-		lblBanco = new JLabel("Meu Banco");
+		lblBanco = new JLabel("SISTEMA DE CAIXA ELETRÔNICO");
 		lblBanco.setBounds(40, 20, 400, 30);
 		add(lblBanco);
 		
