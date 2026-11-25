@@ -143,8 +143,8 @@ btnSacar.addActionListener(e -> {
 				    if (notas100 > 0) mensagemSaque += "- " + notas100 + " nota(s) de R$ 100\n";
 				    if (notas50 > 0)  mensagemSaque += "- " + notas50 + " nota(s) de R$ 50\n";
 				    
-				 // quando o deposito é feito, adiciona ao histórico do extrato
-				    extrato += "Saque: + R$ " + String.format("%.2f", saque) + "\n";
+				 // quando o saque é feito, adiciona ao histórico do extrato
+				    extrato += "Saque: - R$ " + String.format("%.2f", saque) + "\n";
 				    txaMensagem.setText("Saque realizado com sucesso!");
 				    
 				    txtValor.setText("");
