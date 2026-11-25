@@ -126,11 +126,10 @@ btnSacar.addActionListener(e -> {
 				else {
 					saldo -= saque;
 					lblSaldo.setText ("R$" + String.format("%.2f", saldo));
-					txtValor.setText("");
 					
 					// Cálculo das notas (RN05 e RN07)
-				    int valorInteiro = (int) saque; //o valor inteiro do saque
-				    int notas100 = valorInteiro / 100; //pega o valor do saque e divide por 100 para definir a quantidade de notas de 100
+				    int valorInteiro = (int) saque; 
+				    int notas100 = valorInteiro / 100; 
 				    int resto = valorInteiro % 100;
 
 				    int notas50 = resto / 50;
@@ -142,11 +141,12 @@ btnSacar.addActionListener(e -> {
 				    String mensagemSaque = "Saque de R$ " + String.format("%.2f", saque) + " realizado!\nNotas entregues:\n";
 				    if (notas100 > 0) mensagemSaque += "- " + notas100 + " nota(s) de R$ 100\n";
 				    if (notas50 > 0)  mensagemSaque += "- " + notas50 + " nota(s) de R$ 50\n";
+				    if (notas10 > 0)  mensagemSaque += "- " + notas10 + " nota(s) de R$ 10\n";
+				    		
+				    txaMensagem.setText(mensagemSaque);
 				    
 				 // quando o saque é feito, adiciona ao histórico do extrato
 				    extrato += "Saque: - R$ " + String.format("%.2f", saque) + "\n";
-				    txaMensagem.setText("Saque realizado com sucesso!");
-				    
 				    txtValor.setText("");
 
 				}
