@@ -38,7 +38,7 @@ public class MeuBanco extends JFrame {
 		txtValor.setBounds(40, 175, 400, 30);
 		add(txtValor);
 		
-		btnDepositar = new JButton("Realizar depósito");
+		btnDepositar = new JButton("Depositar");
 		btnDepositar.setBounds(40, 225, 125, 40);
 		add(btnDepositar);
 		
